@@ -1,4 +1,10 @@
-package com.example.weather.dto;
+package com.lilia.weather.dto;
 
-public class WeatherResponse {
+import java.math.BigDecimal;
+
+public record WeatherResponse(
+        String condition,
+        double temperature,
+        double wind_speed
+) {
 }

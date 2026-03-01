@@ -1,4 +1,13 @@
-package com.example.weather.dto;
+package com.lilia.weather.dto;
 
-public class OpenWeatherResponse {
+import java.util.List;
+
+public record OpenWeatherResponse(
+        List<WeatherItem> weather,
+        Main main,
+        Wind wind
+) {
+    public record WeatherItem(String description) {}
+    public record Main(double temp) {}
+    public record Wind(double speed) {}
 }
